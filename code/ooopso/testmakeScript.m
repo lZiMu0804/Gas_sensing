@@ -18,9 +18,9 @@ fprintf(fid, '\n');
 fprintf(fid, 'Set oAnsoftApp = CreateObject("AnsoftHfss.HfssScriptInterface")\n');
 fprintf(fid, 'Set oDesktop = oAnsoftApp.GetAppDesktop()\n');
 fprintf(fid, 'oDesktop.RestoreWindow\n');
-fprintf(fid, 'oDesktop.OpenProject "%s"\n', [ 'D:\delete\raderpso\ooopso\array\array' stnum '.aedt']);%program name list
+fprintf(fid, 'oDesktop.OpenProject "%s"\n', [ 'D:\Git_project\Gas_sensing\code\ooopso\array\array' stnum '.aedt']);%program name list
 fprintf(fid, ['Set oProject = oDesktop.SetActiveProject("array' stnum '")\n']);
-fprintf(fid, 'Set oDesign = oProject.SetActiveDesign("ultra")\n');
+fprintf(fid, 'Set oDesign = oProject.SetActiveDesign("all")\n');
 fprintf(fid, '  \n');
 %% ChangeProperty
 % [px,~] = size(d);

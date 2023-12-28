@@ -14,7 +14,7 @@ value(1:py) = inf;
 for i = 1:py 
     pop(i,7)=0.2;pop(i,8)=20;
     pop1 = pop(i,:)
-        if ((pop1(1)+5*pop1(11)+3*pop1(3)+pop1(4)+pop1(10)<50)&&(pop1(5)<pop1(6))&&(pop1(1)+pop1(11)>pop1(6)))
+        if ((pop1(1)+2*pop1(11)+pop1(3)+pop1(4)+2*pop1(10)<50)&&(pop1(5)<pop1(6))&&(pop1(1)+pop1(11)>pop1(6)))
             testmakeScript(pop1(1,:),i,index,scriptPath);  %Calculate the corresponding function value计算响应函数值
             ScriptFile = [scriptPath num2str(i) '.vbs'];  %stored in the corresponding file
             hfssExecute(hfssExePath,ScriptFile,true,true);

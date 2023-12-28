@@ -4,16 +4,14 @@ clc;clear all;close all;
 d = 11;        %space dimension
 N = 20;        %the number of initial populations
 ger = 25;      %maximum number of iterations
-limit = [2,16;4,20;0.5,5;1,8;1,7;3,15;0.1,1;10,30;10,100;2,20;1,7;];% set positional parameter range limits 
+limit = [2,20;4,32;0.5,13.5;1,9.5;1,7;3,17;0.1,1;10,30;10,100;2,20;1,7;];% set positional parameter range limits 
 vlimit = [-1,1;-1,1;-1,1;-1,1;-1,1;-1,1;-1,1;-1,1;-1,1;-1,1;-1,1;];% set speed limit
 w = 0.8;                       % inertia weight
 c1 = 0.1;                       % self-learning factor
 c2 = 0.1;                       % group-learning factor 
 %% Invoke HFSS
-% hfssExePath = '"D:\Program Files\AnsysEM\AnsysEM19.1\Win64\ansysedt.exe"';  %HFSS path
-% hfssExePath = '"D:\Program Files\AnsysEM\AnsysEM21.2\Win64\ansysedt.exe"';  %HFSS path
 hfssExePath = '"D:\Program Files\AnsysEM\AnsysEM19.1\Win64\ansysedt.exe"';  %HFSS path
-scriptPath = 'D:\delete\raderpso\ooopso3\script\Stript';      %script path
+scriptPath = 'D:\Git_project\Gas_sensing\code\ooopso\script\Stript';      %script path
 %% Generate initial files
 if ~exist('.\result','dir')  
     mkdir('.\result');
@@ -34,17 +32,17 @@ end
 %% The location of the initial population
 x = testinitpop(d,N,limit);
 x=x';
-x(1,1)=9;
-x(1,2)=12;
-x(1,3)=1;
-x(1,4)=4;
-x(1,5)=2.3;
-x(1,6)=7.8;
+x(1,1)=11;
+x(1,2)=17.9;
+x(1,3)=6.9;
+x(1,4)=5.75;
+x(1,5)=4.2;
+x(1,6)=10.5;
 x(1,7)=0.2;
 x(1,8)=20;
-x(1,9)=30;
-x(1,10)=13;
-x(1,11)=2.5;
+x(1,9)=25.6;
+x(1,10)=7.6;
+x(1,11)=3.2;
 
 v = roundn(rand(N,d),-1);        % speed initialization
 xm = x;                          % the historical best position for each individual

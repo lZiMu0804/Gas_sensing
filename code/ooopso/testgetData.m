@@ -12,7 +12,7 @@ dataFre = dataZ(:,1);
 dataZ(:,1) = [];
 dataZ;
 %% fitness function
-n=find(dataFre==922);
+n=find(dataFre==0.922);
 mzr=dataZ(n,1)
 mzi=dataZ(n,2)
 m1=abs(mzr-30.53)+abs(mzi-211.81);
