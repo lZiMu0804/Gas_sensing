@@ -1,4 +1,4 @@
->## **GA stag**
+>## **Gastag**
 >
 >**Gastag is a system that uses passive metamaterial tags to sense gases by using RFID technology.**
 >
